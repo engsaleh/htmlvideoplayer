@@ -1,0 +1,104 @@
+body{
+	
+	margin: auto;
+	
+}
+ 
+#player {
+	background-color: #000000;
+	display: inline-block;
+	/*Ensuring that user can't select the player*/
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+/* for all images */
+img {
+	background-color: #808080;
+}
+
+img:hover {
+	background-color: #72f7f7;
+}
+
+img, #pbar-container, #sbar-container {
+	cursor: pointer;
+}
+
+#video-container {
+	width: 640px;
+	height: 360px;
+	position: relative;
+}
+
+	video {
+		height: 100%;
+		width: 100%; 
+	}
+
+	#screen {
+		height: 100%;
+		width: 100%;
+		line-height: 360px;
+		text-align: center;
+		position: absolute;
+		z-index: 1 !important;
+
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	}
+
+		#screen img{
+			vertical-align: middle;
+		}
+
+#pbar-container {
+	margin-top: 2px;
+	padding-bottom: 2px;
+	background-color: #808080;
+}
+	#pbar{
+		height: 5px;
+		width: 0%;
+		background-color: #72f7f7;
+	}
+
+#buttons-container {
+	height: 50px;
+}
+	/* Accessing all the direct children of the buttons container */
+	#buttons-container > * {
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		/*outline: 1px solid red;*/
+		margin: 0 10px;
+	}
+	
+	#time-field {
+		color: #72f7f7;
+		cursor: default;
+		/*We can now ensure that the text appears in the middle*/
+		line-height: 50px;
+	}
+	#sound-button {
+		margin-right: 0;
+	}
+	#sbar-container{
+		width: 100px;
+		height: 5px;
+		background-color: #808080;
+		margin-left: 0;
+	}
+		#sbar {
+			height: 100%;
+			width: 100%;
+			background-color: #72f7f7;
+		}
+	#fullscreen-button {
+		float: right;
+	}
